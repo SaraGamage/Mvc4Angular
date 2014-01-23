@@ -19,20 +19,27 @@
     </section>
 }
 <h3>We suggest the following:</h3>
-<div ng-app>
+<div ng-controller="DataController">
      <h1>2 way binding</h1> 
-    <input type = "trxt" ng-model ="name" />
+    <input type="text" ng-model="name" />
    <h1>{{name}}</h1> 
-
-    <div ng-controller ="MyCtrl">
+    <div>
+        {{items}}
     <ul>
-        <li ng-repeat = "item in items"
-                {{item.name}}
+        <li ng-repeat="item in items">
+            {{$index}}: {{item.name}} 
         </li>
+    </ul>
+
+        <hr />
+        <ul class="example-animate-container">
+      <li class="animate-repeat" ng-repeat="friend in friends | filter:thetextboxtext">
+        [{{$index + 1}}] {{friend.name}} who is {{friend.age}} years old.
+      </li>
     </ul>
     </div>
 </div>
-<ol class="round" ng-app>
+<ol class="round">
 
     <li class="one">
         <h5>Getting Started</h5>
