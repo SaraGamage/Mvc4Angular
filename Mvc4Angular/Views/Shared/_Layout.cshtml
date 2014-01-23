@@ -5,10 +5,20 @@
         <title>@ViewBag.Title - My ASP.NET MVC Application</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
+      
     </head>
     <body>
+        
+        <link href="@Url.Content("~/Styles/bootstrap.css")" rel="stylesheet"  type="text/css" />
+        <script src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/angular.js")" type="text/javascript"></script>
+
+        @Styles.Render("~/Styles/bootstrap.css")
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/Scripts/jquery-1.8.2.min.js")
+        @Scripts.Render("~/Scripts/angular.js")
+         @Scripts.Render("~/Scripts/ng-scripts/app.js")
         <header>
             <div class="content-wrapper">
                 <div class="float-left">

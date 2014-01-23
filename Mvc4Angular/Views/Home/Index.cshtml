@@ -19,7 +19,21 @@
     </section>
 }
 <h3>We suggest the following:</h3>
-<ol class="round">
+<div ng-app>
+     <h1>2 way binding</h1> 
+    <input type = "trxt" ng-model ="name" />
+   <h1>{{name}}</h1> 
+
+    <div ng-controller ="MyCtrl">
+    <ul>
+        <li ng-repeat = "item in items"
+                {{item.name}}
+        </li>
+    </ul>
+    </div>
+</div>
+<ol class="round" ng-app>
+
     <li class="one">
         <h5>Getting Started</h5>
         ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
